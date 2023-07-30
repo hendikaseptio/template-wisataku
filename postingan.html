@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wisataku</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.css">
+</head>
+<body>
+	<header id="header">
+		<div class="container">
+			<div id="header-content">
+				<a href="index.html" id="logo">WISATAKU</a>
+				<div id="nav-icon">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="menu-bars" onclick="menu()"><i class="bi bi-list"></i></div>
+				<nav id="navbar" class="">
+					<a href="index.html" class="nav-item active">Home</a>
+					<a href="postingan.html" class="nav-item">Berita</a>
+					<a href="galeri.html" class="nav-item">Galeri</a>
+					<a href="kontak.html" class="nav-item">Kontak</a>
+					<a href="login.html" class="nav-item">Login</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section style="margin-top: 55px;padding:60px 0">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12 p-2">
+					<h3>Telusuri Tempat wisata Menakjubkan</h3>
+					<form class="form-search" action="">
+						<input type="text" placeholder="telusuri...">
+						<button><i class="bi bi-search"></i> Cari</button>
+					</form>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
+					<div class="card">
+						<div class="card-image">
+							<img src="img/photo01.jpg" alt="tempat wisata">
+						</div>
+						<div class="card-body">
+							<h4>Pantai Widuri</h4>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dignissimos quos quis inventore. <span class="text-fade"></span></p>
+							<a href="detail.html" class="card-link btn btn-theme">Detail <i class="bi bi-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
+					<div class="card">
+						<div class="card-image">
+							<img src="img/photo02.jpg" alt="tempat wisata">
+						</div>
+						<div class="card-body">
+							<h4>Gunung Slamet</h4>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Impedit, autem. Odit soluta, ut<span class="text-fade"></span></p>
+							<a href="detail.html" class="card-link btn btn-theme">Detail <i class="bi bi-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
+					<div class="card">
+						<div class="card-image">
+							<img src="img/photo03.jpg" alt="tempat wisata">
+						</div>
+						<div class="card-body">
+							<h4>Kebun Teh</h4>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quaerat, ipsa animi at dolore<span class="text-fade"></span></p>
+							<a href="detail.html" class="card-link btn btn-theme">Detail <i class="bi bi-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
+					<div class="card">
+						<div class="card-image">
+							<img src="img/photo04.jpg" alt="tempat wisata">
+						</div>
+						<div class="card-body">
+							<h4>Nanas Belik</h4>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Eum quas aspernatur ut sit, nisi eius necessitatibus modi<span class="text-fade"></span></p>
+							<a href="detail.html" class="card-link btn btn-theme">Detail <i class="bi bi-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="container">
+			<div class="d-flex space-between">
+				<small>Wisataku.com | Copyright &copy; 2021</small>
+				<small><a href="#banner">Kembali ke atas <i class="bi bi-chevron-double-up"></i></a></small>
+			</div>
+		</div>
+	</footer>
+	<script>
+		function menu() {
+			let navbar = document.getElementById('navbar');
+			navbar.classList.toggle('active');
+		}
+	</script>
+</body>
