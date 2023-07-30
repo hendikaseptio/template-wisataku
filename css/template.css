@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --tema : var(--blue);
+    --shadow : 0 10px 10px -5px #00000080;
+    --shadow-sm : 0 7px 7px -7px #000000;
+}
+body {
+    font-family: 'Poppins', sans-serif!important;
+}
+img {
+    width: 100%;
+}
+/* componen */
+.btn {
+    border-radius: 0!important;
+}
+.btn:hover {
+    box-shadow: var(--shadow-sm);
+}
+.card {
+    border: none!important;
+    border-radius: 0!important;
+}
+.card .card-body {
+    padding: 15px 0;
+}
+.card-image {
+	width: 100%;
+    height: 300px;
+    overflow: hidden;
+    transition: .7s ease-in-out;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s ease-in-out;
+}
+.cover-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 0;
+	/*background-color: #00000050;*/
+	backdrop-filter: blur(15px);
+	position: absolute;
+	bottom: 0;
+	font-size: 40px;
+	color: #fff;
+	transition: inherit;
+}
+.cover-img a {
+	opacity: 0;
+	transition: .4s all;
+}
+.card:hover .card-image {
+	box-shadow: 0 10px 10px -5px #555;
+}
+.card:hover .card-image img {
+	transform: scale(1.1);
+}
+.card:hover .cover-img {
+	height: 100%;
+}
+.card:hover .cover-img a {
+	opacity: 1;
+}
+.myshadow {
+    box-shadow: var(--shadow);
+}
+.link {
+    text-decoration: none!important;
+}
+.link.link-black {
+    color: #222;
+}
+.dropdown-menu {
+    position: absolute!important;
+    padding: 0!important;
+    border: none!important;
+    border-radius: 0!important;
+    box-shadow: var(--shadow);
+    background-color: var(--light)!important;
+}
+.dropdown-menu .dropdown-item {
+    padding: .5rem 1rem!important;
+}
+.dropdown-menu::before {
+    content: "";
+    display: flex;
+    justify-content: center;
+    width: 0; 
+    height: 0;
+    margin: auto;
+    margin-left: 20%;
+    margin-top: -9px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid var(--light);
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--tema)!important;
+    color: #fff!important;
+}
+.breadcrumb {
+    /* display: inline-flex!important; */
+    background-color: #ffffff!important;
+    border-radius: 0!important;
+}
+
+/* header area */
+header#header {
+    position: fixed;
+    top:0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 10px 40px -7px #00000050;
+}
+header#header #header-content {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+header#header #header-content #logo {
+    text-decoration: none;
+    font-size: 18px;
+}
+header#header #header-content #logo img {
+    width: 50px;
+    border-radius: 50%;
+}
+header#header #header-content .menu-bars {
+    font-size: 30px;
+    cursor: pointer;
+}
+header#header #header-content #navbar {
+    display: flex;
+    align-items: center;
+}
+header#header #header-content #navbar .nav-item {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #888;
+    transition: .4s ease-in-out;
+}
+header#header #header-content #navbar .nav-item:hover {
+    color: var(--tema);
+}
+header#header #header-content #navbar .nav-item.active {
+    color: var(--tema);
+}
+header#header #header-content #navbar .nav-item.dropdown {
+    margin: 0;
+}
+header#header #header-content #navbar .nav-item.dropdown .dropdown-toggle {
+    padding: 0!important;
+}
+
+/* banner */
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-color: #555;
+    background-image: url('../img/banner.jpg');
+    background-blend-mode: multiply;
+    animation: bg 7s linear infinite;
+    overflow: hidden;
+}
+@keyframes bg {
+    0% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+#banner #text-banner {
+    text-align: center;
+    color: white;
+}
+#banner #text-banner h1 {
+    letter-spacing: 10px;
+    font-weight: normal;
+}
+#banner-second {
+    position: relative;
+    margin-top: 60px;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/banner.jpg);
+    background-color: var(--tema);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    -webkit-clip-path: ellipse(100% 99% at 31% 0%);
+    clip-path: ellipse(100% 99% at 31% 0%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#banner-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#banner-tree {
+    width: 50%;
+    height: 300px;
+    margin-left: -20%;
+    background-color: var(--tema);
+    -webkit-clip-path: polygon(0 0, 24% 0, 100% 100%, 41% 100%);
+    clip-path: polygon(0 0, 24% 0, 100% 100%, 41% 100%);
+}
+/* fitur */
+#fitur {
+    margin-top: -50px;
+}
+#fitur .card.center {
+    margin-top: -50px;
+    background-color: var(--tema);
+    color: white;
+}
+/* about */
+#about, #kompetensi {
+    padding-top: 80px;
+}
+#postingan {
+    padding-bottom: 80px;
+}
+/* footer */
+#map {
+	width: 100%;	
+	background-image: url('../img/bgmap.png');
+	background-color: #555;
+    background-size: cover;
+	background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	color: #fff;
+}
+/* #map::before {
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+    -webkit-clip-path: ellipse(100% 39% at 50% 100%);
+    clip-path: ellipse(100% 39% at 50% 100%);
+
+} */
+#map .blur {
+    
+	padding: 80px 0;
+  	/* backdrop-filter: blur(5px);   */
+}
+#map .sosmed {
+	display: flex;
+	align-items: center;
+}
+#map .sosmed .link-sosmed {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+    font-size: 20px;
+	margin-right: 20px;
+	transition: .7s all ease;
+}
+#map .sosmed .link-sosmed:hover {
+    background-color: var(--tema);
+    color: #fff;
+    border: none;
+}
+#footer {
+	width: 100%;
+	padding: 20px 0;
+	background-color: var(--tema);
+	color: #fff;
+}
+#footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* responsive area */
+@media (max-width: 768px){
+    header#header #header-content #navbar {
+        position: fixed;
+        display: block;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        transition: .7s ease-in-out;
+        padding: 15px;
+        background-color: var(--dark);
+        box-shadow: 0 10px 20px -7px #00000050;
+    }
+    header#header #header-content #navbar.active {
+        left: 0;
+    }
+    header#header #header-content #navbar a.nav-item {
+        transition: 1s ease-in-out;
+    }
+    header#header #header-content #navbar.active a.nav-item.active {
+        background-color: var(--tema);
+        color: var(--white);
+    }
+    header#header #header-content #navbar.active a.nav-item {
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    #fitur .card.center {
+        margin-top: 0;
+    }
+}
